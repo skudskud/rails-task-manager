@@ -1,0 +1,22 @@
+<div class="container">
+  <h1><%= @tasks.title %></h1>
+    <% if @tasks.completed == true %>
+      <div class="task">
+        <input type="checkbox" id="scales" name="scales" checked>
+        <%= @tasks.details %>
+        <%= @tasks.completed %>
+      </div>
+    <% else %>
+      <div class="task" class="fa fa-trash" aria-hidden="true">
+        <input type="checkbox" id="scales" name="scales">
+        <%= @tasks.details %>
+        <%= @tasks.completed %>
+      </div>
+      <% end %>
+      <br><br>
+      <%= link_to "Retour", list_path %>
+      <%= link_to "Edit a task", edit_path %>
+</div> 
+
+
+
